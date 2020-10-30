@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_home"
+    app:startDestination="@id/appleFragment">
+
+    <fragment
+        android:id="@+id/appleFragment"
+        android:name="com.example.jetpack.AppleFragment"
+        android:label="AppleFragment" >
+        <action
+            android:id="@+id/action_appleFragment_to_watermelonFragment"
+            app:destination="@id/watermelonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watermelonFragment"
+        android:name="com.example.jetpack.WatermelonFragment"
+        android:label="WatermelonFragment" >
+        <action
+            android:id="@+id/action_watermelonFragment_to_bananaFragment"
+            app:destination="@id/bananaFragment" />
+        <argument
+            android:name="size"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/bananaFragment"
+        android:name="com.example.jetpack.BananaFragment"
+        android:label="BananaFragment" />
+</navigation>
