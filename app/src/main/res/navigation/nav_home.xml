@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_home"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
     app:startDestination="@id/appleFragment">
 
     <fragment
         android:id="@+id/appleFragment"
         android:name="com.example.jetpack.AppleFragment"
-        android:label="AppleFragment" >
+        android:label="AppleFragment"
+        tools:layout="@layout/fragment_apple">
         <action
             android:id="@+id/action_appleFragment_to_watermelonFragment"
-            app:destination="@id/watermelonFragment" />
+            app:destination="@id/watermelonFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/watermelonFragment"
         android:name="com.example.jetpack.WatermelonFragment"
-        android:label="WatermelonFragment" >
+        android:label="WatermelonFragment"
+        tools:layout="@layout/fragment_watermelon">
         <action
             android:id="@+id/action_watermelonFragment_to_bananaFragment"
             app:destination="@id/bananaFragment" />
         <argument
             android:name="size"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/bananaFragment"
         android:name="com.example.jetpack.BananaFragment"
-        android:label="BananaFragment" />
+        android:label="BananaFragment"
+        tools:layout="@layout/fragment_banana" />
 </navigation>
