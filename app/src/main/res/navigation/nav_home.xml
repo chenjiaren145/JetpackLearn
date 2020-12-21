@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_home"
-    app:startDestination="@id/appleFragment">
+    app:startDestination="@id/appleFragment">           <!-- 配置初始 Fragment   -->
 
     <fragment
         android:id="@+id/appleFragment"
-        android:name="com.example.jetpack.AppleFragment"
+        android:name="com.example.jetpack.ui.AppleFragment"
         android:label="AppleFragment"
         tools:layout="@layout/fragment_apple">
         <action
@@ -17,23 +17,26 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_appleFragment_to_bananaFragment"
+            app:destination="@id/bananaFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/watermelonFragment"
-        android:name="com.example.jetpack.WatermelonFragment"
+        android:name="com.example.jetpack.ui.WatermelonFragment"
         android:label="WatermelonFragment"
         tools:layout="@layout/fragment_watermelon">
-        <action
-            android:id="@+id/action_watermelonFragment_to_bananaFragment"
-            app:destination="@id/bananaFragment" />
+        <!--    利用 navigation-safe-args-gradle-plugin 预定义传参数    -->
         <argument
             android:name="size"
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
+
     <fragment
         android:id="@+id/bananaFragment"
-        android:name="com.example.jetpack.BananaFragment"
+        android:name="com.example.jetpack.ui.BananaFragment"
         android:label="BananaFragment"
         tools:layout="@layout/fragment_banana" />
 </navigation>
