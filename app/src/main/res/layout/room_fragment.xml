@@ -6,44 +6,44 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.BananaFragment">
+        tools:context=".ui.RoomFragment">
 
         <Button
-            android:id="@+id/btInsert"
+            android:id="@+id/bt_insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="63dp"
             android:text="插入"
-            app:layout_constraintBottom_toTopOf="@+id/btDelete"
+            app:layout_constraintBottom_toTopOf="@+id/bt_delete"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btDelete"
+            android:id="@+id/bt_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="59dp"
             android:text="删除"
-            app:layout_constraintBottom_toTopOf="@+id/btReset"
-            app:layout_constraintStart_toStartOf="@+id/btInsert" />
+            app:layout_constraintBottom_toTopOf="@+id/bt_reset"
+            app:layout_constraintStart_toStartOf="@+id/bt_insert" />
 
         <Button
-            android:id="@+id/btReset"
+            android:id="@+id/bt_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="257dp"
             android:text="重置"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/btDelete" />
+            app:layout_constraintStart_toStartOf="@+id/bt_delete" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/bt_other"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="39dp"
-            android:text="Button"
-            app:layout_constraintStart_toStartOf="@+id/btReset"
-            app:layout_constraintTop_toBottomOf="@+id/btReset" />
+            android:text="综合实践"
+            app:layout_constraintStart_toStartOf="@+id/bt_reset"
+            app:layout_constraintTop_toBottomOf="@+id/bt_reset" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

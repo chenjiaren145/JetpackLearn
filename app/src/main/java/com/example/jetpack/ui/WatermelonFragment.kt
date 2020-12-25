@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.fragment.navArgs
-import com.example.jetpack.databinding.FragmentWatermelonBinding
-import com.example.jetpack.model.WatermelonViewModel
+import com.example.jetpack.databinding.WatermelonFragmentBinding
+import com.example.jetpack.viewmodel.WatermelonViewModel
 
 
 class WatermelonFragment : Fragment() {
@@ -17,7 +16,7 @@ class WatermelonFragment : Fragment() {
     // 从navArgs中获取传递的参数
     private val args: WatermelonFragmentArgs by navArgs()
 
-    private lateinit var binding: FragmentWatermelonBinding
+    private lateinit var binding: WatermelonFragmentBinding
 
     private val viewModel by lazy {
         WatermelonViewModel()
@@ -31,7 +30,7 @@ class WatermelonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentWatermelonBinding.inflate(inflater)
+        binding = WatermelonFragmentBinding.inflate(inflater)
         return binding.root
     }
 

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.jetpack.model.WatermelonViewModel" />
+            type="com.example.jetpack.viewmodel.WatermelonViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

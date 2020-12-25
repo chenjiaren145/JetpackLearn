@@ -3,30 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_home"
-    app:startDestination="@id/appleFragment">           <!-- 配置初始 Fragment   -->
+    app:startDestination="@id/homeFragment">           <!-- 配置初始 Fragment   -->
 
     <fragment
-        android:id="@+id/appleFragment"
-        android:name="com.example.jetpack.ui.AppleFragment"
-        android:label="AppleFragment"
-        tools:layout="@layout/fragment_apple">
+        android:id="@+id/homeFragment"
+        android:name="com.example.jetpack.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
         <action
-            android:id="@+id/action_appleFragment_to_watermelonFragment"
+            android:id="@+id/action_homeFragment_to_watermelonFragment"
             app:destination="@id/watermelonFragment"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
-            android:id="@+id/action_appleFragment_to_bananaFragment"
-            app:destination="@id/bananaFragment" />
+            android:id="@+id/action_homeFragment_to_roomFragment"
+            app:destination="@id/roomFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment
         android:id="@+id/watermelonFragment"
         android:name="com.example.jetpack.ui.WatermelonFragment"
         android:label="WatermelonFragment"
-        tools:layout="@layout/fragment_watermelon">
+        tools:layout="@layout/watermelon_fragment">
         <!--    利用 navigation-safe-args-gradle-plugin 预定义传参数    -->
         <argument
             android:name="size"
@@ -35,8 +39,23 @@
     </fragment>
 
     <fragment
-        android:id="@+id/bananaFragment"
-        android:name="com.example.jetpack.ui.BananaFragment"
+        android:id="@+id/roomFragment"
+        android:name="com.example.jetpack.ui.RoomFragment"
         android:label="BananaFragment"
-        tools:layout="@layout/fragment_banana" />
+        tools:layout="@layout/room_fragment">
+        <action
+            android:id="@+id/action_roomFragment_to_architectureFragment"
+            app:destination="@id/architectureFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/architectureFragment"
+        android:name="com.example.jetpack.ui.ArchitectureFragment"
+        android:label="architecture_fragment"
+        tools:layout="@layout/architecture_fragment" />
+
 </navigation>

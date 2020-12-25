@@ -6,7 +6,7 @@ import androidx.room.*
 interface UserDao {
 
     @Query("SELECT * FROM user_table WHERE userId = :id")
-    suspend fun getUserById(id: String): User?
+    suspend fun getUserById(id: Int): User?
 
     @Query("SELECT * FROM USER_TABLE")
     suspend fun getAll(): List<User>
